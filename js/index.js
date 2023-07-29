@@ -4,11 +4,7 @@ setInterval(getLocation, 3000);
 
 function getLocation() {
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition, null, {
-            enableHighAccuracy: true,
-            timeout: 5000,
-            maximumAge: 0
-        });
+        navigator.geolocation.getCurrentPosition(showPosition);
     }
 }
 
