@@ -1,10 +1,10 @@
 const display = document.getElementById('display');
 
-setInterval(getLocation, 3000);
+setTimeout(getLocation, 1000);
 
 function getLocation() {
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
+        navigator.geolocation.watchPosition(showPosition);
     }
 }
 
